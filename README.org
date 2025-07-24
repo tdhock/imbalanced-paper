@@ -1,0 +1,21 @@
+Paper comparing algorithms for imbalanced classification (in progress)
+
+** 24 July 2025
+
+[[file:2025-07-22-conv-linear-prop0.01.R]] creates launches an
+imbalanced SOK experiment on the cluster (beluga), generating result files
+
+- [[file:2025-07-22-conv-linear-prop0.01/results.csv]] contains test AUC.
+- [[file:2025-07-22-conv-linear-prop0.01/learners.csv.gz]] contains subtrain/validation loss/AUC/etc.
+
+Then [[file:2025-07-22-conv-linear-prop0.01/figure-results.R]] creates the following two result figures:
+
+[[file:2025-07-22-conv-linear-prop0.01/2025-07-22-conv-linear-prop0.01-subtrain-validation.png]]
+
+The figure above shows the following trends (for 1% positive labels, learning rate 0.05).
+
+- train=balanced: not enough epochs. learning rate too big for linear AUM and conv logistic.
+- train=imbalanced: linear AUM min valid at <200 epochs (OK). conv AUM need more epochs. variation between seeds for min valid AUC. logistic very slow.
+- Suggest: increase number of epochs, and try increase and decrease learning rate.
+
+[[file:2025-07-22-conv-linear-prop0.01/2025-07-22-conv-linear-prop0.01.png]]
