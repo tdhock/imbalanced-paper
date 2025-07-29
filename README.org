@@ -1,8 +1,40 @@
 Paper comparing algorithms for imbalanced classification (in progress)
 
+** 29 July 2025
+
+[[file:2025-07-24-conv-linear-prop0.01.R]] launches an
+imbalanced SOK experiment on the cluster (beluga),
+with
+
+- conv and linear models,
+- learning rate (lr) in 0.01, 0.1, 1
+- train and test in balanced or imbalanced
+
+[[file:2025-07-24-conv-linear-prop0.01/figure-results.R]] generates result figures
+
+[[file:2025-07-24-conv-linear-prop0.01/2025-07-24-conv-linear-prop0.01-AUM-compare-lr.png]]
+
+- subtrain AUM goes to zero for linear model on train imbalanced MNIST.
+- imbalanced train missing for conv model.
+- number of epochs still too small (for full batch size).
+- min conv loss much smaller than min linear loss.
+
+[[file:2025-07-24-conv-linear-prop0.01/2025-07-24-conv-linear-prop0.01-logistic-loss-MNIST.png]]
+
+- compare with MNIST batch size 100 log loss [[https://tdhock.github.io/blog/2025/mlr3torch-conv/][result blog]].
+- best models at lr=0.1, number of epochs too small.
+- conv loss smaller than linear.
+
+[[file:2025-07-24-conv-linear-prop0.01/2025-07-24-conv-linear-prop0.01-AUM.png]]
+
+- AUM and AUC subtrain values are very similar.
+- Some differences between validation curves.
+
+[[file:2025-07-24-conv-linear-prop0.01/2025-07-24-conv-linear-prop0.01-logistic.png]]
+
 ** 24 July 2025
 
-[[file:2025-07-22-conv-linear-prop0.01.R]] creates launches an
+[[file:2025-07-22-conv-linear-prop0.01.R]] launches an
 imbalanced SOK experiment on the cluster (beluga), generating result files
 
 - [[file:2025-07-22-conv-linear-prop0.01/results.csv]] contains test AUC.
