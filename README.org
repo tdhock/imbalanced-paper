@@ -1,5 +1,20 @@
 Paper comparing algorithms for imbalanced classification (in progress)
 
+** 31 July 2025
+
+[[file:2025-07-30-conv-linear-prop0.01.R]] launches an imbalanced SOK experiment on rorqual, same as below.
+
+[[file:2025-07-30-conv-linear-prop0.01/results.csv]] data after 20 hours.
+
+[[file:2025-07-30-conv-linear-prop0.01/results.R]] makes figure below
+
+[[file:2025-07-30-conv-linear-prop0.01/results-timings.png]]
+
+- conv is clearly 5-10x longer than linear.
+- AUM about the same time as logistic.
+- lr has no clear effect on time.
+- why does imbalanced training take longer on FashionMNIST?
+
 ** 29 July 2025
 
 [[file:2025-07-24-conv-linear-prop0.01.R]] launches an
