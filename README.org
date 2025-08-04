@@ -17,7 +17,11 @@ Paper comparing algorithms for imbalanced classification (in progress)
 - lr has no clear effect on time.
 - why does imbalanced training take longer on FashionMNIST?
 
+[[file:2025-07-30-conv-linear-prop0.01/learners-figure.R]] makes figures in [[file:2025-07-30-conv-linear-prop0.01/]]
 
+[[file:2025-07-30-conv-linear-prop0.01/2025-07-30-conv-linear-prop0.01-compare-lr-zoom-loss.png]]
+
+[[file:2025-07-30-conv-linear-prop0.01/2025-07-30-conv-linear-prop0.01-compare-lr-zoom.png]]
 
 ** 29 July 2025
 
