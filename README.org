@@ -1,5 +1,19 @@
 Paper comparing algorithms for imbalanced classification (in progress)
 
+** 3 Sept 2025
+
+[[file:2025-04-04-nnet_prop0.01-pred.R]] makes figure below
+
+[[file:2025-04-04-nnet_prop0.01-pred.png]]
+
+Above we see that
+
+- when the true label is 1, AUM gradient descent learns predicted probability of 0.5.
+- when the true label is 0, AUM gradient descent learns predicted probability smaller than 0.5.
+- the pattern is not the same for logistic loss, which learns predicted probabilities tending to 0 or 1.
+
+Compare with [[https://github.com/OGuenoun/R-AUM_Multiclass/issues/10][Omar results]] indicates his code probably has a bug.
+
 ** 31 July 2025
 
 [[file:2025-07-30-conv-linear-prop0.01.R]] launches an imbalanced SOK experiment on rorqual, same as below.
